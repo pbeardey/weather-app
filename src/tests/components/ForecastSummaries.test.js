@@ -9,7 +9,7 @@ describe("ForecastSummaries", () => {
     {
       date: 1111111,
       description: "Stub description",
-      icon: "stubIcon",
+      icon: "800",
       temperature: {
         min: 12,
         max: 22,
@@ -18,7 +18,7 @@ describe("ForecastSummaries", () => {
     {
       date: 1111111+25200000,
       description: "Stub2 description",
-      icon: "stub2Icon",
+      icon: "802",
       temperature: {
         min: 15,
         max: 25,
@@ -38,7 +38,7 @@ describe("ForecastSummaries-values", () => {
     {
       date: 1111111,
       description: "Stub description",
-      icon: "stubIcon",
+      icon: "800",
       temperature: {
         min: 12,
         max: 22,
@@ -47,10 +47,10 @@ describe("ForecastSummaries-values", () => {
     {
       date: 26311111,
       description: "Stub2 description",
-      icon: "stub2Icon",
+      icon: "802",
       temperature: {
-      min: 15,
-      max: 25,
+        min: 15,
+        max: 25,
       },
     }
   ];

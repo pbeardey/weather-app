@@ -8,7 +8,7 @@ describe("ForecastSummary-snapshot", () => {
   const validProps = {
     date: 1111111,
     description: "Stub description",
-    icon: "stubIcon",
+    icon: "800",
     temperature: {
       min: 12,
       max: 22,
@@ -25,7 +25,7 @@ describe("ForecastSummary-snapshot", () => {
       />
     );
 
-    expect (asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
@@ -33,7 +33,7 @@ describe("ForecastSummary-values", () => {
   const validProps = {
     date: 1111111,
     description: "Stub description",
-    icon: "stubIcon",
+    icon: "800",
     temperature: {
       min: 12,
       max: 22,
@@ -50,7 +50,7 @@ describe("ForecastSummary-values", () => {
       />
     );
 
-    expect(getByText("1111111")).toHaveAttribute(
+    expect(getByText("Thu Jan 01 1970")).toHaveAttribute(
       "class",
       "forecast-summary__date"
     );
