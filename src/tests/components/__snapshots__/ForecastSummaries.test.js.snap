@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastSummaries renders correctly 1`] = `
+exports[`ForecastSummaries ForecastSummaries-snapshot renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="forecast-summaries"
@@ -33,6 +33,11 @@ exports[`ForecastSummaries renders correctly 1`] = `
       >
         Stub description
       </div>
+      <button
+        type="button"
+      >
+        More details
+      </button>
     </div>
     <div
       class="forecast-summary"
@@ -62,6 +67,11 @@ exports[`ForecastSummaries renders correctly 1`] = `
       >
         Stub2 description
       </div>
+      <button
+        type="button"
+      >
+        More details
+      </button>
     </div>
   </div>
 </DocumentFragment>

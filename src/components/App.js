@@ -9,18 +9,22 @@ import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
 
 function App({ location, forecasts }) {
-  // eslint-disable-next-line no-unused-vars
+  const { city, country } = location;
   const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
-  // eslint-disable-next-line no-unused-vars
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
-  const { city, country } = location;
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
 
   return (
     <div className="weather-app">
       <LocationDetails city={city} country={country} />
-      <ForecastSummaries forecasts={forecasts} />
+      <ForecastSummaries
+        forecasts={forecasts}
+        onForecastSelect={handleForecastSelect}
+      />
       <ForecastDetails forecast={selectedForecast} />
     </div>
   );

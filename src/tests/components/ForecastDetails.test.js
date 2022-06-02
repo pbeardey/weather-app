@@ -16,6 +16,9 @@ describe("ForecastDetails", () => {
       direction: "nnw",
       speed: 12,
     },
+    onForecastSelect() {
+      return 1;
+    },
   };
 
   describe("ForecastDetails-snapshot", () => {
