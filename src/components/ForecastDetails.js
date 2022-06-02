@@ -3,8 +3,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function ForecastDetails(props) {
-  const { forecast } = props;
+function ForecastDetails({forecast}) {
+//   const { forecast } = props;
   const { date, humidity, temperature, wind } = forecast;
   const formattedDate = new Date(date).toDateString();
 
@@ -15,23 +15,22 @@ function ForecastDetails(props) {
         className="forecast-details__temperature"
         data-testid="forecast-details__temp-max"
       >
-        Max Temperature:
-        {temperature.max}&deg;C
+        Max Temperature: {temperature.max}&deg;C
       </div>
       <div
         className="forecast-details__temperature"
         data-testid="forecast-details__temp-min"
       >
-        <b>Min Temperature: </b>
-        {temperature.min}&deg;C
+        Min Temperature: {temperature.min}&deg;C
       </div>
-      <div className="forecast-details__humidity">
-        <b>Humidity: </b>
-        {humidity}%
+      <div
+        className="forecast-details__humidity"
+        data-testid="forecast-details__humidity"
+      >
+        Humidity: {humidity}%
       </div>
       <div className="forecast-wind" data-testid="forecast-details__wind">
-        <b>Wind: </b>
-        {wind.speed}mph {wind.direction}
+        Wind: {wind.speed}mph {wind.direction}
       </div>
     </div>
   );
