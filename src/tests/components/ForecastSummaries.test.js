@@ -45,7 +45,7 @@ describe("ForecastSummaries-values", () => {
       },
     },
     {
-      date: 1111111+25200000,
+      date: 26311111,
       description: "Stub2 description",
       icon: "stub2Icon",
       temperature: {
