@@ -3,8 +3,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function ForecastDetails({forecast}) {
-//   const { forecast } = props;
+function ForecastDetails({ forecast }) {
   const { date, humidity, temperature, wind } = forecast;
   const formattedDate = new Date(date).toDateString();
 
