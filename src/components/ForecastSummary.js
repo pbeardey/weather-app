@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 
 function ForecastSummary(props) {
-  // eslint-disable-next-line no-unused-vars
   const { date, description, icon, temperature, onSelect } = props;
   const formattedDate = new Date(date).toDateString();
 
