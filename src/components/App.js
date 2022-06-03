@@ -14,9 +14,16 @@ function App() {
   const [forecasts, setForecasts] = useState([]);
   const [selectedDate, setSelectedDate] = useState(0);
   const [searchText, setSearchText] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    getForecasts(searchText, setSelectedDate, setForecasts, setLocation);
+    getForecasts(
+      searchText,
+      setErrorMessage,
+      setForecasts,
+      setLocation,
+      setSelectedDate
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -29,23 +36,37 @@ function App() {
   };
 
   const handleCitySearch = () => {
-    getForecasts(searchText, setSelectedDate, setForecasts, setLocation);
+    getForecasts(
+      searchText,
+      setErrorMessage,
+      setForecasts,
+      setLocation,
+      setSelectedDate
+    );
   };
 
   return (
     <div className="weather-app">
-      <LocationDetails city={location.city} country={location.country} />
+      <LocationDetails
+        city={location.city}
+        country={location.country}
+        errorMessage={errorMessage}
+      />
       <SearchForm
         searchText={searchText}
         setSearchText={setSearchText}
         onSubmit={handleCitySearch}
       />
-      <ForecastSummaries
-        forecasts={forecasts}
-        onForecastSelect={handleForecastSelect}
-        onSubmit={handleCitySearch}
-      />
-      {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+      {!errorMessage && (
+        <ForecastSummaries
+          forecasts={forecasts}
+          onForecastSelect={handleForecastSelect}
+          onSubmit={handleCitySearch}
+        />
+      )}
+      {!errorMessage && selectedForecast && (
+        <ForecastDetails forecast={selectedForecast} />
+      )}
     </div>
   );
 }
