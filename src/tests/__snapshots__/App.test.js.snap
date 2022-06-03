@@ -13,6 +13,7 @@ exports[`App renders the App correctly 1`] = `
     >
       <input
         type="text"
+        value=""
       />
       <button
         type="submit"

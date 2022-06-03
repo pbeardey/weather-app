@@ -13,9 +13,11 @@ function App() {
   const [location, setLocation] = useState({ city: "", country: "" });
   const [forecasts, setForecasts] = useState([]);
   const [selectedDate, setSelectedDate] = useState(0);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    getForecasts(setSelectedDate, setForecasts, setLocation);
+    getForecasts(searchText, setSelectedDate, setForecasts, setLocation);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedForecast = forecasts.find(
@@ -26,13 +28,22 @@ function App() {
     setSelectedDate(date);
   };
 
+  const handleCitySearch = () => {
+    getForecasts(searchText, setSelectedDate, setForecasts, setLocation);
+  };
+
   return (
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
-      <SearchForm />
+      <SearchForm
+        searchText={searchText}
+        setSearchText={setSearchText}
+        onSubmit={handleCitySearch}
+      />
       <ForecastSummaries
         forecasts={forecasts}
         onForecastSelect={handleForecastSelect}
+        onSubmit={handleCitySearch}
       />
       {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
     </div>

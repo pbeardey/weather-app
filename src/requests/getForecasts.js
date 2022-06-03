@@ -4,8 +4,12 @@ import axios from "axios";
 
 const WEATHER_APP_API = "https://mcr-codes-weather.herokuapp.com/forecast";
 
-function getForecasts(setSelectedDate, setForecasts, setLocation) {
-  axios.get(WEATHER_APP_API).then((res) => {
+function getForecasts(searchText, setSelectedDate, setForecasts, setLocation) {
+  let queryText = "";
+  if (searchText) {
+    queryText += `?city=${searchText}`;
+  }
+  return axios.get(`${WEATHER_APP_API}${queryText}`).then((res) => {
     setSelectedDate(res.data.forecasts[0].date);
     setForecasts(res.data.forecasts);
     setLocation(res.data.location);
