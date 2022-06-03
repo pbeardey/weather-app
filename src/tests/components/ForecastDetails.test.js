@@ -47,5 +47,4 @@ describe("ForecastDetails", () => {
       "forecast-details__humidity"
     );
   });
-
 });
