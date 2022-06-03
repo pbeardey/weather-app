@@ -3,10 +3,11 @@
 import React, { useEffect, useState } from "react";
 import "../styles/App.css";
 
-import getForecast from "../requests/getForecasts";
+import getForecasts from "../requests/getForecasts";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
+import SearchForm from "./SearchForm";
 
 function App() {
   const [location, setLocation] = useState({ city: "", country: "" });
@@ -14,7 +15,7 @@ function App() {
   const [selectedDate, setSelectedDate] = useState(0);
 
   useEffect(() => {
-    getForecast(setSelectedDate, setForecasts, setLocation);
+    getForecasts(setSelectedDate, setForecasts, setLocation);
   }, []);
 
   const selectedForecast = forecasts.find(
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
+      <SearchForm />
       <ForecastSummaries
         forecasts={forecasts}
         onForecastSelect={handleForecastSelect}
