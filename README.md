@@ -1,4 +1,4 @@
-# Weather App
+# Weather App :sun_behind_rain_cloud:
 
 ## Contents
 * [Introduction](#introduction)
