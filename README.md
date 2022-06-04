@@ -30,7 +30,7 @@ API handling with axios
   GET request and error handling
 
 ## Libraries/Frameworks
-nodeJS, React, PropTypes, React-Testing-Library, Axios, React-Weather-Icons;
+Node.js, React, PropTypes, React-Testing-Library, Axios, React-Weather-Icons;
 
 ## Installation
 

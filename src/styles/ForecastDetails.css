@@ -1,3 +1,10 @@
 /* src/styles/ForecastDetails.css */
 
+.forecast-details {
+    text-align: center;
 
+}
+
+.forecast-details div {
+    margin: 10px;
+}
