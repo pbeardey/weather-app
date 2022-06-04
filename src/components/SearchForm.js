@@ -2,6 +2,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import "../styles/SearchForm.css";
 
 function SearchForm({ searchText, setSearchText, onSubmit }) {
   const handleInputChange = (event) => {

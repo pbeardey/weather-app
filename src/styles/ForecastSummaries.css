@@ -1,4 +1,7 @@
+/* src/styles/ForcastSummaries.css */
+
 .forecast-summaries {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
