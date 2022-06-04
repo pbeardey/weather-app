@@ -1,0 +1,24 @@
+add css files and update readme
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Sat Jun 4 11:50:15 2022 +0100
+#
+# On branch main
+# Your branch is ahead of 'origin/main' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   README.md
+#	new file:   Weather-App.png
+#	modified:   src/components/ForecastDetails.js
+#	modified:   src/components/ForecastSummary.js
+#	modified:   src/components/LocationDetails.js
+#	modified:   src/components/SearchForm.js
+#	new file:   src/styles/ForecastDetails.css
+#	modified:   src/styles/ForecastSummaries.css
+#	new file:   src/styles/ForecastSummary.css
+#	new file:   src/styles/LocationDetails.css
+#	new file:   src/styles/SearchForm.css
+#
