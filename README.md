@@ -4,11 +4,11 @@
 * [Introduction](#introduction)
 * [Overview](#overview)
 * [Concepts](#concepts)
-* [Libraries/Frameworks](librarys/frameworks)
-* [Installation](installation)
-* [Credits](testing)
-* [Testing](testing)
-* [Improvements](improvements)
+* [Libraries/Frameworks](#Libraries/Frameworks)
+* [Installation](#installation)
+* [Credits](#credits)
+* [Testing](#testing)
+* [Improvements](#improvements)
 
 
 ## Introduction
