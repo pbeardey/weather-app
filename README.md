@@ -4,15 +4,18 @@
 * [Introduction](#introduction)
 * [Overview](#overview)
 * [Concepts](#concepts)
-* [Libraries/Framewors](librarys/frameworks)
+* [Libraries/Frameworks](librarys/frameworks)
 * [Installation](installation)
 * [Credits](testing)
 * [Testing](testing)
+* [Improvements](improvements)
+
 
 ## Introduction
 
 A 5 day weather forecasting app.
 The first project in [ManchesterCodes](www.manchestercodes.com) Frontend unit.
+Available to [view in browser](http://pbc-weather-app.herokuapp.com/), hosted on heroku.
 
 
 ## Overview
@@ -33,9 +36,19 @@ API handling with axios
 Node.js, React, PropTypes, React-Testing-Library, Axios, React-Weather-Icons;
 
 ## Installation
-
+1. Clone the repo.
+2. Run locally on http://localhost:3000 with `npm start`
 
 ## Credits
+This is a [Manchester](https://www.manchestercodes.com) Codes Project
 
 ## Testing
+Run the tests with `npm test`
+
+## Improvements
+With more time I would:
+  Use an icon to show wind direction
+  Make it look prettier - maybe have the background show the current weather etc.
+  Do a drop down of cities/towns available when searching.
+
 

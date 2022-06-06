@@ -3,7 +3,7 @@
 exports[`ForecastDetails ForecastDetails-snapshot renders the 4 propss correctly 1`] = `
 <DocumentFragment>
   <div
-    class="forecast-datails"
+    class="forecast-details"
     data-testid="forecast-details"
   >
     <div
