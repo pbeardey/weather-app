@@ -19,6 +19,7 @@ function App() {
   useEffect(() => {
     getForecasts(
       searchText,
+      setSearchText,
       setErrorMessage,
       setForecasts,
       setLocation,
@@ -38,6 +39,7 @@ function App() {
   const handleCitySearch = () => {
     getForecasts(
       searchText,
+      setSearchText,
       setErrorMessage,
       setForecasts,
       setLocation,

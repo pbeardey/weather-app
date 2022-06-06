@@ -8,6 +8,7 @@ const WEATHER_APP_API = "https://mcr-codes-weather.herokuapp.com/forecast";
 
 function getForecasts(
   searchText,
+  setSearchText,
   setErrorMessage,
   setForecasts,
   setLocation,
@@ -24,6 +25,7 @@ function getForecasts(
       setSelectedDate(res.data.forecasts[0].date);
       setForecasts(res.data.forecasts);
       setLocation(res.data.location);
+      setSearchText("");
     })
     .catch((error) => {
       const { status } = error.response;
