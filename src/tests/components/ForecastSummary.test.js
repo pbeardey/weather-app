@@ -1,7 +1,5 @@
-// src/tests/components/ForecastSummary.test.js
-
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import ForecastSummary from "../../components/ForecastSummary";
 
 describe("ForecastSummary", () => {
@@ -13,8 +11,8 @@ describe("ForecastSummary", () => {
       min: 12,
       max: 22,
     },
+    onSelect: () => {},
   };
-  function onSelect() {}
 
   describe("ForecastSummary-snapshot", () => {
     it("renders the 4 props correctly", () => {
@@ -24,44 +22,52 @@ describe("ForecastSummary", () => {
           description={validProps.description}
           icon={validProps.icon}
           temperature={validProps.temperature}
-          onSelect={onSelect}
+          onSelect={validProps.onSelect}
         />
       );
+
       expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("ForecastSummary-values", () => {
     it("renders correct values for the 4 props", () => {
-      const { getByText, getByTestId } = render(
+      const { asFragment, getByTestId } = render(
         <ForecastSummary
           date={validProps.date}
           description={validProps.description}
           icon={validProps.icon}
           temperature={validProps.temperature}
-          onSelect={onSelect}
+          onSelect={validProps.onSelect}
         />
       );
 
-      expect(getByText("Thu Jan 01 1970")).toHaveAttribute(
-        "class",
-        "forecast-summary__date"
-      );
-
-      expect(getByText("Stub description")).toHaveAttribute(
-        "class",
-        "forecast-summary__description"
-      );
-
+      expect(asFragment()).toHaveTextContent("Thu Jan 01 1970");
+      expect(asFragment()).toHaveTextContent("Stub description");
       expect(getByTestId("forecast-icon")).toHaveAttribute(
         "class",
         "forecast-summary__icon"
       );
+      expect(asFragment()).toHaveTextContent("22°C");
+    });
+  });
 
-      expect(getByText("22°C")).toHaveAttribute(
-        "Class",
-        "forecast-summary__temperature"
+  describe("ForecastSummary-values", () => {
+    it("renders the more details button", () => {
+      render(
+        <ForecastSummary
+          date={validProps.date}
+          description={validProps.description}
+          icon={validProps.icon}
+          temperature={validProps.temperature}
+          onSelect={validProps.onSelect}
+        />
       );
+      const detailsButton = screen.getByRole("button", {
+        name: /more details/i,
+      });
+
+      expect(detailsButton).toBeInTheDocument();
     });
   });
 });
