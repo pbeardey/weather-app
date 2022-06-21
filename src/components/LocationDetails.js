@@ -1,11 +1,8 @@
-// src/components/LocationDetails.js
-
 import React from "react";
 import PropTypes from "prop-types";
 import "../styles/LocationDetails.css";
 
-function LocationDetails(props) {
-  const { city, country, errorMessage } = props;
+function LocationDetails({ city, country, errorMessage }) {
   return errorMessage ? (
     <h1 className="location-details">{`${errorMessage}`}</h1>
   ) : (

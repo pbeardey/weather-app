@@ -1,13 +1,10 @@
-// src/components/ForecastSummaries.js
-
 import React from "react";
 import PropTypes from "prop-types";
 import "../styles/ForecastSummaries.css";
 
 import ForecastSummary from "./ForecastSummary";
 
-function ForecastSummaries(props) {
-  const { forecasts, onForecastSelect } = props;
+function ForecastSummaries({ forecasts, onForecastSelect }) {
   return (
     <div className="forecast-summaries">
       {forecasts.map((forecast) => (

@@ -1,5 +1,3 @@
-// src/componants/ForecastDetails.js
-
 import React from "react";
 import PropTypes from "prop-types";
 import "../styles/ForecastDetails.css";
@@ -39,9 +37,7 @@ function ForecastDetails({ forecast }) {
 ForecastDetails.propTypes = {
   forecast: PropTypes.shape({
     date: PropTypes.number,
-    // description: PropTypes.string,
     humidity: PropTypes.number,
-    // icon: PropTypes.number,
     temperature: PropTypes.shape({
       max: PropTypes.number,
       min: PropTypes.number,
