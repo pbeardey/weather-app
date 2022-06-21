@@ -1,10 +1,8 @@
-// src/tests/components/SearchForm.test.js
-
 import React from "react";
 import { render } from "@testing-library/react";
 import SearchForm from "../../components/SearchForm";
 
-describe("SearchForm", ()=> {
+describe("SearchForm", () => {
   const validProps = {
     searchText: "Leeds",
     setSearchText: () => {},
@@ -18,6 +16,7 @@ describe("SearchForm", ()=> {
         onSubmit={validProps.onSubmit}
       />
     );
+
     expect(getByText("Search")).toBeInstanceOf(HTMLButtonElement);
   });
 
@@ -29,6 +28,7 @@ describe("SearchForm", ()=> {
         onSubmit={validProps.onSubmit}
       />
     );
+
     expect(getByDisplayValue("Leeds")).toBeInstanceOf(HTMLInputElement);
   });
 });
