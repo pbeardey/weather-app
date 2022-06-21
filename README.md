@@ -25,22 +25,33 @@ Details of the weather for today are also displayed, and the user can select det
 ![screenshot](https://github.com/pbeardey/weather-app/blob/main/Weather-App.png)
 
 ## Concepts
-React
-  JSX, Components, Props, PropTypes, State, React Hooks, useEffect, 
-Testing
-  React Testing Library
-API handling with axios
-  GET request and error handling
+* React
+  - JSX,  
+  - Components,  
+  - Props,  
+  - PropTypes,  
+  - State,  
+  - React Hooks,  
+  - useEffect, 
+* Testing
+  - React Testing Library
+* API handling with axios
+  - GET request and error handling
 
 ## Libraries/Frameworks
-Node.js, React, PropTypes, React-Testing-Library, Axios, React-Weather-Icons;
+- Node.js,  
+- React,  
+- PropTypes,  
+- React-Testing-Library,  
+- Axios,  
+- React-Weather-Icons;
 
 ## Installation
 1. Clone the repo.
 2. Run locally on http://localhost:3000 with `npm start`
 
 ## Credits
-This is a [Manchester](https://www.manchestercodes.com) Codes Project
+This is a [Manchester Codes](https://www.manchestercodes.com) Project
 
 ## Testing
 Run the tests with `npm test`
