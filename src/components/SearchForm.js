@@ -1,5 +1,3 @@
-// src/components/searchForm/js
-
 import React from "react";
 import PropTypes from "prop-types";
 import "../styles/SearchForm.css";
@@ -19,10 +17,10 @@ function SearchForm({ searchText, setSearchText, onSubmit }) {
   );
 }
 
-export default SearchForm;
-
 SearchForm.propTypes = {
   searchText: PropTypes.string.isRequired,
   setSearchText: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
+
+export default SearchForm;
