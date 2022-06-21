@@ -1,5 +1,3 @@
-// src/components.App.js
-
 import React, { useEffect, useState } from "react";
 import "../styles/App.css";
 
@@ -18,14 +16,12 @@ function App() {
 
   useEffect(() => {
     getForecasts(
-      searchText,
-      setSearchText,
+      "",
       setErrorMessage,
       setForecasts,
       setLocation,
       setSelectedDate
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedForecast = forecasts.find(
@@ -39,7 +35,6 @@ function App() {
   const handleCitySearch = () => {
     getForecasts(
       searchText,
-      setSearchText,
       setErrorMessage,
       setForecasts,
       setLocation,
